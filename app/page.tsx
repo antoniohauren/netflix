@@ -1,3 +1,11 @@
+import { Button } from "@/components/Button";
+
 export default function Home() {
-  return <h1>qwe</h1>;
+  return (
+    <>
+      <h1 className="text-green-500 text-4xl">qwe</h1>
+
+      <Button label="Signout" />
+    </>
+  );
 }

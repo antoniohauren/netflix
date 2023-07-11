@@ -3,6 +3,7 @@
 import { Button } from "@/components/Button";
 import { Input } from "@/components/Input";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function AuthPage() {
@@ -10,6 +11,12 @@ export default function AuthPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [variant, setVariant] = useState<"login" | "register">("login");
+
+  const router = useRouter();
+
+  function handleLogin() {
+    router.push("/profiles");
+  }
 
   function toggleVariant() {
     setVariant(() => (variant === "login" ? "register" : "login"));
@@ -65,7 +72,10 @@ export default function AuthPage() {
               />
             </div>
 
-            <Button label={isLogin ? "Sign in" : "Sign up"} />
+            <Button
+              label={isLogin ? "Sign in" : "Sign up"}
+              onClick={handleLogin}
+            />
 
             <p className="text-neutral-500 mt-12">
               {isLogin
