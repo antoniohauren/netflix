@@ -1,6 +1,7 @@
 "use client";
 
 import { SelectUserCard } from "@/components/SelectUserCard";
+import { useUserStore } from "@/stores/useUserStore";
 import { useRouter } from "next/navigation";
 
 const users = [
@@ -10,8 +11,11 @@ const users = [
 
 export default function ProfilesPage() {
   const router = useRouter();
+  const { setUser } = useUserStore();
 
-  function handleProfileSelect() {
+  function handleProfileSelect(name: string, imageUrl: string) {
+    setUser(name, imageUrl);
+
     router.push("/");
   }
 
@@ -24,7 +28,10 @@ export default function ProfilesPage() {
 
         <div className="flex items-center justify-center gap-8 mt-10">
           {users.map((user, index) => (
-            <div key={index} onClick={handleProfileSelect}>
+            <div
+              key={index}
+              onClick={() => handleProfileSelect(user.name, user.image)}
+            >
               <SelectUserCard image={user.image} name={user.name} />
             </div>
           ))}

@@ -58,7 +58,7 @@ export function MoreInfoModal({ onClose, visible }: MoreInfoModalProps) {
 
               <div className="flex flex-row gap-4 items-center">
                 <PlayButton movieId={data?.id || 0} />
-                <FavoriteButton movieId={data?.id || 0} favoriteIds={[]} />
+                <FavoriteButton movieId={data?.id || 0} />
               </div>
             </div>
           </div>

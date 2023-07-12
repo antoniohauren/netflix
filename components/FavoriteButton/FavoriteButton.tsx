@@ -1,11 +1,9 @@
+import { useFavoritesStore } from "@/stores/useFavoritesStore";
 import { BsCheck, BsPlus } from "react-icons/bs";
 import { FavoriteButtonProps } from ".";
 
-export function FavoriteButton({
-  movieId,
-  favoriteIds,
-  handleFavorite,
-}: FavoriteButtonProps) {
+export function FavoriteButton({ movieId }: FavoriteButtonProps) {
+  const { handleFavorite, favoriteIds } = useFavoritesStore();
   const isFavorite = favoriteIds.includes(movieId);
 
   const Icon = isFavorite ? BsCheck : BsPlus;

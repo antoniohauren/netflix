@@ -5,4 +5,4 @@ type Movie = MovieCardProps["data"];
 export type MovieListProps = {
   title: string;
   items: Movie[];
-} & Pick<MovieCardProps, "favoriteIds" | "handleFavorite">;
+};

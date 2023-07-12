@@ -1,11 +1,14 @@
 "use client";
 
+import { useUserStore } from "@/stores/useUserStore";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { AccountMenuProps } from ".";
 
 export function AccountMenu({ visible }: AccountMenuProps) {
   const router = useRouter();
+
+  const { image, name } = useUserStore();
 
   function handleSignOut() {
     router.push("/auth");
@@ -21,7 +24,7 @@ export function AccountMenu({ visible }: AccountMenuProps) {
         <div className="px-3 group/item flex flex-row gap-3 items-center w-full">
           <div className="relative w-8 h-8">
             <Image
-              src="/images/default-blue.png"
+              src={image || "/images/default-blue.png"}
               fill={true}
               alt="user profile picture"
               className="rounded-md"
@@ -29,7 +32,7 @@ export function AccountMenu({ visible }: AccountMenuProps) {
           </div>
 
           <p className="text-white text-sm group-hover/item:underline">
-            Antonio
+            {name || "User"}
           </p>
         </div>
 

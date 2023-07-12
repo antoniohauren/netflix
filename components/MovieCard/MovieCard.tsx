@@ -6,11 +6,7 @@ import { BsPlayFill } from "react-icons/bs";
 import { MovieCardProps } from ".";
 import { FavoriteButton } from "../FavoriteButton";
 
-export function MovieCard({
-  data,
-  handleFavorite,
-  favoriteIds,
-}: MovieCardProps) {
+export function MovieCard({ data }: MovieCardProps) {
   const router = useRouter();
 
   return (
@@ -43,11 +39,7 @@ export function MovieCard({
               <BsPlayFill size={30} />
             </div>
 
-            <FavoriteButton
-              movieId={data.id}
-              handleFavorite={handleFavorite}
-              favoriteIds={favoriteIds}
-            />
+            <FavoriteButton movieId={data.id} />
           </div>
 
           <p className="text-green-400 font-semibold mt-4">

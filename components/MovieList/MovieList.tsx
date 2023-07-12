@@ -1,12 +1,7 @@
 import { MovieListProps } from ".";
 import { MovieCard } from "../MovieCard";
 
-export function MovieList({
-  items,
-  title,
-  favoriteIds,
-  handleFavorite,
-}: MovieListProps) {
+export function MovieList({ items, title }: MovieListProps) {
   if (items?.length === 0) {
     return null;
   }
@@ -21,12 +16,7 @@ export function MovieList({
 
       <div className="grid grid-cols-4 gap-2">
         {items?.map((item) => (
-          <MovieCard
-            key={item.id}
-            data={item}
-            favoriteIds={favoriteIds}
-            handleFavorite={handleFavorite}
-          />
+          <MovieCard key={item.id} data={item} />
         ))}
       </div>
     </section>

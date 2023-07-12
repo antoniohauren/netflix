@@ -1,6 +1,7 @@
 "use client";
 
 import { navBarItems } from "@/share/constants";
+import { useUserStore } from "@/stores/useUserStore";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { BsBell, BsChevronDown, BsSearch } from "react-icons/bs";
@@ -15,6 +16,8 @@ export function NavBar({}: NavBarProps) {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showAccountMenu, setShowAccountMenu] = useState(false);
   const [showBackground, setShowBackground] = useState(false);
+
+  const { image } = useUserStore();
 
   function toggleMobileMenu() {
     setShowMobileMenu((value) => !value);
@@ -88,7 +91,7 @@ export function NavBar({}: NavBarProps) {
           >
             <div className="w-6 h-6 lg:w-10 lg:h-10 overflow-hidden relative">
               <Image
-                src="/images/default-blue.png"
+                src={image || "/images/default-blue.png"}
                 alt="user profile picture"
                 fill={true}
                 className="rounded-md"
