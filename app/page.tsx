@@ -1,6 +1,7 @@
 "use client";
 
 import { BillBoard } from "@/components/BillBoard";
+import { MoreInfoModal, useMoreInfoModal } from "@/components/MoreInfoModal";
 import { MovieList } from "@/components/MovieList";
 import { NavBar } from "@/components/NavBar";
 import { useMovies } from "@/hooks/useMovies";
@@ -8,6 +9,7 @@ import { useState } from "react";
 
 export default function Home() {
   const [favoriteIds, setFavoriteIds] = useState<number[]>([]);
+  const { isOpen, close } = useMoreInfoModal();
 
   const movies = useMovies();
   const favorites = movies.filter((movie) => favoriteIds.includes(movie.id));
@@ -22,6 +24,8 @@ export default function Home() {
 
   return (
     <>
+      <MoreInfoModal visible={isOpen} onClose={close} />
+
       <NavBar />
 
       <BillBoard />
