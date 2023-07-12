@@ -1,8 +1,13 @@
 import Image from "next/image";
 import { BsPlayFill } from "react-icons/bs";
 import { MovieCardProps } from ".";
+import { FavoriteButton } from "../FavoriteButton";
 
-export function MovieCard({ data }: MovieCardProps) {
+export function MovieCard({
+  data,
+  handleFavorite,
+  favoriteIds,
+}: MovieCardProps) {
   return (
     <div className="group bg-zinc-900 col-span relative h-[12vw]">
       <div className="w-full h-[12vw]">
@@ -32,6 +37,12 @@ export function MovieCard({ data }: MovieCardProps) {
             >
               <BsPlayFill size={30} />
             </div>
+
+            <FavoriteButton
+              movieId={data.id}
+              handleFavorite={handleFavorite}
+              favoriteIds={favoriteIds}
+            />
           </div>
 
           <p className="text-green-400 font-semibold mt-4">
