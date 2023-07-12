@@ -12,7 +12,7 @@ export const mockShows = [
     id: 1,
     title: "Sintel",
     description:
-      "Geralt of Rivia, a solitary monster hunter, struggles to find his place in a world where people often prove more wicked than beasts.",
+      "A lonely young woman, Sintel, helps and befriends a dragon, whom she calls Scales. But when he is kidnapped by an adult dragon, Sintel decides to embark on a dangerous quest to find her lost friend Scales.",
     videoUrl:
       "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
     thumbnailUrl: "http://uhdtv.io/wp-content/uploads/2020/10/Sintel-3.jpg",
@@ -23,7 +23,7 @@ export const mockShows = [
     id: 2,
     title: "Sintel",
     description:
-      "Geralt of Rivia, a solitary monster hunter, struggles to find his place in a world where people often prove more wicked than beasts.",
+      "A lonely young woman, Sintel, helps and befriends a dragon, whom she calls Scales. But when he is kidnapped by an adult dragon, Sintel decides to embark on a dangerous quest to find her lost friend Scales.",
     videoUrl:
       "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
     thumbnailUrl: "http://uhdtv.io/wp-content/uploads/2020/10/Sintel-3.jpg",
@@ -34,7 +34,7 @@ export const mockShows = [
     id: 3,
     title: "Sintel",
     description:
-      "Geralt of Rivia, a solitary monster hunter, struggles to find his place in a world where people often prove more wicked than beasts.",
+      "A lonely young woman, Sintel, helps and befriends a dragon, whom she calls Scales. But when he is kidnapped by an adult dragon, Sintel decides to embark on a dangerous quest to find her lost friend Scales.",
     videoUrl:
       "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
     thumbnailUrl: "http://uhdtv.io/wp-content/uploads/2020/10/Sintel-3.jpg",
@@ -45,7 +45,7 @@ export const mockShows = [
     id: 4,
     title: "Sintel",
     description:
-      "Geralt of Rivia, a solitary monster hunter, struggles to find his place in a world where people often prove more wicked than beasts.",
+      "A lonely young woman, Sintel, helps and befriends a dragon, whom she calls Scales. But when he is kidnapped by an adult dragon, Sintel decides to embark on a dangerous quest to find her lost friend Scales.",
     videoUrl:
       "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
     thumbnailUrl: "http://uhdtv.io/wp-content/uploads/2020/10/Sintel-3.jpg",
